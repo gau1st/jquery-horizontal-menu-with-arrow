@@ -280,12 +280,14 @@ if (menuInvisibleSize <= 20) {
   $(rightSide).addClass('remove-class');
 }
 
+var itemsLength = $('#scrollableHorizontalMenu .item').length;
+
 // scroll to left
 $(rightPaddle).on('click', function() {
-	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() + 130}, scrollDuration);
+	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() + (menuSize / itemsLength) }, scrollDuration);
 });
 // scroll to right
 $(leftPaddle).on('click', function() {
-	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() - 130 }, scrollDuration);
+	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() - (menuSize / itemsLength) }, scrollDuration);
 });
 </script>
