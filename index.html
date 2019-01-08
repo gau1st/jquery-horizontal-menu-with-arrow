@@ -189,6 +189,7 @@
 
 <!-- Include Jquery here -->
 
+
 <!-- Horizontal Scroll -->
 <script>
 // duration of scroll animation
@@ -239,21 +240,30 @@ $('#scrollableHorizontalMenu .menu').on('scroll', function() {
 		$(leftPaddle).addClass('hidden');
 		$(rightPaddle).removeClass('hidden');
     $(leftSide).addClass('hidden');
-		$(rightSidee).removeClass('hidden');
+		$(rightSide).removeClass('hidden');
 	} else if (menuPosition < menuEndOffset) {
 		// show both paddles in the middle
 		$(leftPaddle).removeClass('hidden');
 		$(rightPaddle).removeClass('hidden');
     $(leftSide).removeClass('hidden');
 		$(rightSide).removeClass('hidden');
-	} else if (menuPosition >= menuEndOffset) {
+	} else if (menuPosition  >= (parseInt(menuInvisibleSize) - 3)) {
 		$(leftPaddle).removeClass('hidden');
 		$(rightPaddle).addClass('hidden');
     $(leftSide).removeClass('hidden');
 		$(rightSide).addClass('hidden');
   }
+
+  // alert(parseInt(menuInvisibleSize));
+  // print important values
+	$('#print-wrapper-size span').text(menuWrapperSize);
+	$('#print-menu-size span').text(menuSize);
+	$('#print-menu-invisible-size span').text(parseInt(menuInvisibleSize));
+	$('#print-menu-position span').text(menuPosition);
 });
 $(window).resize(function(){
+
+    $('#scrollableHorizontalMenu .menu').animate( { scrollLeft: 0 }, scrollDuration);
   // get how much of menu is invisible
   menuInvisibleSize = menuSize - menuWrapperSize;
   // get how much have we scrolled so far
@@ -264,7 +274,7 @@ $(window).resize(function(){
     $(rightSide).addClass('hidden');
   } else {
     $(rightPaddle).removeClass('hidden');
-    $(rightSide).addClass('hidden');
+    $(rightSide).removeClass('hidden');
   }
 });
 // get how much of menu is invisible
@@ -276,8 +286,8 @@ if (menuInvisibleSize <= 20) {
   $(rightPaddle).addClass('hidden');
   $(rightSide).addClass('hidden');
 } else {
-  $(rightPaddle).addClass('remove-class');
-  $(rightSide).addClass('remove-class');
+  $(rightPaddle).removeClass('hidden');
+  $(rightSide).removeClass('hidden');
 }
 
 var itemsLength = $('#scrollableHorizontalMenu .item').length;
