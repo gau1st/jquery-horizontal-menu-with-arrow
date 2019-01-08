@@ -1,103 +1,189 @@
-
-<div class="left-filter" >
-  <div class="menu-wrapper">
-    <ul class="menu">
-      <li class="item">
-        <p style="width: 200px;">1</p>
-      </li>
-      <li class="item">2</li>
-      <li class="item">3</li>
-      <li class="item">4</li>
-      <li class="item">5</li>
-      <li class="item">6</li>
-      <li class="item">7</li>
-      <li class="item">8</li>
-      <li class="item">9</li>
-      <li class="item">6</li>
-      <li class="item">7</li>
-      <li class="item">8</li>
-    </ul>
-    <div class="paddles">
-      <button class="left-paddle paddle hidden"><</button>
-      <button class="right-paddle paddle">></button>
+<div id="scrollableHorizontalMenu">
+    <div class="menu-wrapper">
+      <ul class="menu">
+        <li class="item">
+          <p style="width: 0px;"></p>
+        </li>
+        <li class="item">
+          <p>Finishes</p>
+        </li>
+        <li class="item">
+          <p>Door & Window</p>
+        </li>
+        <li class="item">
+          <p>Kitchen & Bath</p>
+        </li>
+        <li class="item">
+          <p>Construction</p>
+        </li>
+        <li class="item">
+          <p>Me & Equipment</p>
+        </li>
+        <li class="item">
+          <p>Furniture</p>
+        </li>
+        <li class="item">
+          <p>Lighting</p>
+        </li>
+        <li class="item">
+          <p>Finishes</p>
+        </li>
+        <li class="item">
+          <p>Door & Window</p>
+        </li>
+        <li class="item">
+          <p>Kitchen & Bath</p>
+        </li>
+        <li class="item">
+          <p>Construction</p>
+        </li>
+        <li class="item">
+          <p>Me & Equipment</p>
+        </li>
+        <li class="item">
+          <p>Furniture</p>
+        </li>
+        <li class="item">
+          <p>Lighting</p>
+        </li>
+        <li class="item">
+          <p>Finishes</p>
+        </li>
+        <li class="item">
+          <p>Door & Window</p>
+        </li>
+        <li class="item">
+          <p>Kitchen & Bath</p>
+        </li>
+        <li class="item">
+          <p>Construction</p>
+        </li>
+        <li class="item">
+          <p>Me & Equipment</p>
+        </li>
+        <li class="item">
+          <p>Furniture</p>
+        </li>
+        <li class="item">
+          <p>Lighting</p>
+        </li>
+        <li class="item">
+          <p style="width: 0px;"></p>
+        </li>
+      </ul>
+      <div class="left-side-paddle hidden">
+      </div>
+      <div class="right-side-paddle">
+      </div>
+      <div class="paddles">
+        <button class="left-paddle paddle hidden">
+          <svg height="16" width="16" viewBox="0 0 24 24" aria-label="Left arrow" role="img"><title>Left arrow</title><path d="M17.28 24c-.57 0-1.14-.22-1.58-.66L4.5 12 15.7.66a2.21 2.21 0 0 1 3.15 0c.87.88.87 2.3 0 3.18L10.79 12l8.06 8.16c.87.88.87 2.3 0 3.18-.44.44-1 .66-1.57.66"></path></svg>
+        </button>
+        <button class="right-paddle paddle">
+          <svg height="16" width="16" viewBox="0 0 24 24" aria-label="Right arrow" role="img"><title>Right arrow</title><path d="M6.72 24c.57 0 1.14-.22 1.57-.66L19.5 12 8.29.66c-.86-.88-2.27-.88-3.14 0-.87.88-.87 2.3 0 3.18L13.21 12l-8.06 8.16c-.87.88-.87 2.3 0 3.18.43.44 1 .66 1.57.66"></path></svg>
+        </button>
+      </div>
     </div>
-  </div>
-  <!-- <div class="hovered-menu">
-  </div> -->
 </div>
 
+   
 <style>
-
-.left-filter .menu-wrapper {
-  position: relative;
-  max-width: 100%;
-  height: 50px;
-  margin: 1em auto;
-  border: 1px solid black;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.left-filter .menu	{
-  height: 120px;
-  background: #f3f3f3;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  padding: 0;
-  font-size: 0;
-}
-.left-filter .menu .item {
-  display: inline-block;
-  min-width: 100px;
-  width: auto;
-  height: 50px;
-  /* outline: 1px dotted gray; */
-  padding: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.left-filter .paddles {
-}
-.left-filter .paddle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 3em;
-}
-.left-filter .left-paddle {
-  left: 0;
-}
-.left-filter .right-paddle {
-  right: 0;
-}
-.left-filter .hidden {
-  display: none;
-}
-
-.left-filter .print {
-  margin: auto;
-  max-width: 500px;
-}
-
-.left-filter .print span {
-  display: inline-block;
-  width: 100px;
-}
-
-.left-filter .hovered-menu {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  left: 0;
-  background: red;
-  z-index: 1;
-}
+  #scrollableHorizontalMenu {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  #scrollableHorizontalMenu .hidden {
+    display: none;
+  }
+  #scrollableHorizontalMenu .menu-wrapper {
+    position: relative;
+    max-width: 100%;
+    height: 45px;
+    /* margin: 1em auto; */
+    /* border: 1px solid black; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #scrollableHorizontalMenu .menu	{
+    height: 70px;
+    background: #fff;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    font-size: 0;
+  }
+  #scrollableHorizontalMenu .menu .item {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #scrollableHorizontalMenu .menu .item p {
+    margin-bottom: 0px;
+  }
+  #scrollableHorizontalMenu .paddle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3em;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding-top: 5px;
+  }
+  #scrollableHorizontalMenu .left-paddle {
+    left: 0;
+  }
+  #scrollableHorizontalMenu .right-paddle {
+    right: 0;
+  }
+  #scrollableHorizontalMenu .hidden {
+    display: none;
+  }
+  #scrollableHorizontalMenu .print {
+    margin: auto;
+    max-width: 500px;
+  }
+  #scrollableHorizontalMenu .print span {
+    display: inline-block;
+    width: 100px;
+  }
+  #scrollableHorizontalMenu .left-side-paddle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
+    height: 100%;
+  }
+  #scrollableHorizontalMenu .right-side-paddle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
+    height: 100%;
+  }
+  #scrollableHorizontalMenu .hovered-menu {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0;
+    background: red;
+    z-index: 1;
+  }
 </style>
 
 <!-- Include Jquery here -->
@@ -105,130 +191,100 @@
 <!-- Horizontal Scroll -->
 <script>
 // duration of scroll animation
-var scrollDuration = 300;
-// paddles
-var leftPaddle = document.getElementsByClassName('left-paddle');
-var rightPaddle = document.getElementsByClassName('right-paddle');
+var scrollDuration = 100;
+// paddles & Side
+var leftPaddle = $('#scrollableHorizontalMenu .left-paddle');
+var rightPaddle = $('#scrollableHorizontalMenu .right-paddle');
+var leftSide = $('#scrollableHorizontalMenu .left-side-paddle');
+var rightSide = $('#scrollableHorizontalMenu .right-side-paddle');
 // get some relevant size for the paddle triggering point
 var paddleMargin = 20;
-
 // get wrapper width
 var getMenuWrapperSize = function() {
-	return $('.left-filter .menu-wrapper').outerWidth();
+	return $('#scrollableHorizontalMenu .menu-wrapper').outerWidth();
 }
 var menuWrapperSize = getMenuWrapperSize();
-
 // the wrapper is responsive
 $(window).on('resize', function() {
 	menuWrapperSize = getMenuWrapperSize();
 });
 // size of the visible part of the menu is equal as the wrapper size
 var menuVisibleSize = menuWrapperSize;
-
 // get total width of all menu items
 var getMenuSize = function() {
   var totalSize = 0;
-  $('.left-filter .item').each(function(){
+  $('#scrollableHorizontalMenu .item').each(function(){
     totalSize += $(this).outerWidth(true);
   });
 	return totalSize;
 };
-
 var menuSize = getMenuSize();
-
 // get how much of menu is invisible
 var menuInvisibleSize = menuSize - menuWrapperSize;
-
 // get how much have we scrolled to the left
 var getMenuPosition = function() {
-	return $('.left-filter .menu').scrollLeft();
+	return $('#scrollableHorizontalMenu .menu').scrollLeft();
 };
-
-
 // finally, what happens when we are actually scrolling the menu
-$('.left-filter .menu').on('scroll', function() {
-
+$('#scrollableHorizontalMenu .menu').on('scroll', function() {
 	// get how much of menu is invisible
 	menuInvisibleSize = menuSize - menuWrapperSize;
 	// get how much have we scrolled so far
 	var menuPosition = getMenuPosition();
-
 	var menuEndOffset = menuInvisibleSize - paddleMargin;
-
 	// show & hide the paddles
 	// depending on scroll position
 	if (menuPosition <= paddleMargin) {
 		$(leftPaddle).addClass('hidden');
 		$(rightPaddle).removeClass('hidden');
+    $(leftSide).addClass('hidden');
+		$(rightSidee).removeClass('hidden');
 	} else if (menuPosition < menuEndOffset) {
 		// show both paddles in the middle
 		$(leftPaddle).removeClass('hidden');
 		$(rightPaddle).removeClass('hidden');
+    $(leftSide).removeClass('hidden');
+		$(rightSide).removeClass('hidden');
 	} else if (menuPosition >= menuEndOffset) {
 		$(leftPaddle).removeClass('hidden');
 		$(rightPaddle).addClass('hidden');
-
+    $(leftSide).removeClass('hidden');
+		$(rightSide).addClass('hidden');
   }
-
-
-  // print important values
-	$('#print-wrapper-size span').text(menuWrapperSize);
-	$('#print-menu-size span').text(menuSize);
-	$('#print-menu-invisible-size span').text(menuInvisibleSize);
-	$('#print-menu-position span').text(menuPosition);
-
-
 });
-
 $(window).resize(function(){
   // get how much of menu is invisible
   menuInvisibleSize = menuSize - menuWrapperSize;
   // get how much have we scrolled so far
   var menuPosition = getMenuPosition();
-
   var menuEndOffset = menuInvisibleSize - paddleMargin;
-
-
   if (menuInvisibleSize <= 20) {
     $(rightPaddle).addClass('hidden');
+    $(rightSide).addClass('hidden');
   } else {
     $(rightPaddle).removeClass('hidden');
+    $(rightSide).addClass('hidden');
   }
-
-  // print important values
-  $('#print-wrapper-size span').text(menuWrapperSize);
-  $('#print-menu-size span').text(menuSize);
-  $('#print-menu-invisible-size span').text(menuInvisibleSize);
-  $('#print-menu-position span').text(menuPosition);
 });
-
 // get how much of menu is invisible
 menuInvisibleSize = menuSize - menuWrapperSize;
 // get how much have we scrolled so far
 var menuPosition = getMenuPosition();
-
 var menuEndOffset = menuInvisibleSize - paddleMargin;
-
-
 if (menuInvisibleSize <= 20) {
   $(rightPaddle).addClass('hidden');
+  $(rightSide).addClass('hidden');
 } else {
   $(rightPaddle).addClass('remove-class');
+  $(rightSide).addClass('remove-class');
 }
-
-// print important values
-$('#print-wrapper-size span').text(menuWrapperSize);
-$('#print-menu-size span').text(menuSize);
-$('#print-menu-invisible-size span').text(menuInvisibleSize);
-$('#print-menu-position span').text(menuPosition);
 
 // scroll to left
 $(rightPaddle).on('click', function() {
-	$('.left-filter .menu').animate( { scrollLeft: getMenuPosition() + 100}, scrollDuration);
+	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() + 130}, scrollDuration);
 });
-
 // scroll to right
 $(leftPaddle).on('click', function() {
-	$('.left-filter .menu').animate( { scrollLeft: getMenuPosition() - 100 }, scrollDuration);
+	$('#scrollableHorizontalMenu .menu').animate( { scrollLeft: getMenuPosition() - 130 }, scrollDuration);
 });
 </script>
